@@ -94,6 +94,8 @@ To begin, select a v2 change from the menu below.
 
 - [LayoutViews now lets you specify the `regions` hash as an option upon instantiation.](https://github.com/Puppets/marionette-changelog-detail#layoutviews-now-lets-you-specify-the-regions-hash-as-an-option-upon-instantiation)
 
+- [RegionManager now lets you get all the regions at once with `getRegions`](https://github.com/Puppets/marionette-changelog-detail#regionmanager-now-lets-you-get-all-the-regions-at-once-with-getregions)
+
 ================
 
 #### General
@@ -385,3 +387,7 @@ var myLayout = new LayoutView({
   }
 });
 ```
+
+##### RegionManager now lets you get all the regions at once with `getRegions`
+
+The where previously no way of getting all of your regions at once. In order to do so you would've had to access the private `_regions` property. Now you can get all your regions at once with `getRegions`.
