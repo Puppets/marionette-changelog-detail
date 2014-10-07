@@ -42,6 +42,10 @@ To begin, select a v2 change from the menu below.
 
 - [`stopListening` is now called after the `destroy` triggerMethod is called.](https://github.com/Puppets/marionette-changelog-detail#stoplistening-is-now-called-after-the-destroy-triggermethod-is-called)
 
+- [`destroy` now calls triggerMethod `before:destroy`](https://github.com/Puppets/marionette-changelog-detail#destroy-now-calls-triggermethod-beforedestroy)
+
+- [Controllers now fire a new triggerMethod, `before:destroy`, triggerMethod.](https://github.com/Puppets/marionette-changelog-detail#controllers-now-fire-a-new-triggerMethod-beforedestroy-triggerMethod)
+
 #### [Behaviors](https://github.com/Puppets/marionette-changelog-detail#behaviors-1)
 
 - [`Behaviors` now support a means to group behaviors together.](https://github.com/Puppets/marionette-changelog-detail#behaviors-now-support-a-means-to-group-behaviors-together)
@@ -208,6 +212,12 @@ onto the Application. Now they are!
 This is a subtle change, like many of the evented changes seem to be. `stopListening` removes all of the event listeners from the Controller,
 but right now is called before the `destroy` triggerMethod. In Views, the other classes that call stopListening in their destroy function,
 the stopListening happens after close. So we changed it for consistency in the library.
+
+##### Controllers now fire a new triggerMethod, `before:destroy`, triggerMethod.
+
+Every Marionette Class let you tune in before the destroy happened with `onBeforeDestroy`. But Controllers were an unexplained exception to that rule.
+We decided to make it consistent by adding the before destroy hook to the Controller class.
+
 
 #### Behaviors
 
