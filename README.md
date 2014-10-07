@@ -28,6 +28,8 @@ To begin, select a v2 change from the menu below.
 
 - [The built version of Marionette comes in a UMD wrapper.](https://github.com/Puppets/marionette-changelog-detail#the-built-version-of-marionette-comes-in-a-umd-wrapper)
 
+- [jQuery deferred objects can now be replaced via the global `Marionette.Deferred` object.](https://github.com/Puppets/marionette-changelog-detail#jquery-deferred-objects-can-now-be-replaced-via-the-global-marionette-deferred-object)
+
 #### [Applications and Modules](https://github.com/Puppets/marionette-changelog-detail#applications-and-modules-1)
 
 - [The arguments of a Module’s initialize function are now consistent with Module constructor argument order.](https://github.com/Puppets/marionette-changelog-detail#the-arguments-of-a-modules-initialize-function-are-now-consistent-with-module-constructor-argument-order)
@@ -164,6 +166,10 @@ and a a UMD build of the core. There are just two builds now: bundled and not-bu
 
 The biggest change here is that the directory structure of the built files has changed. Be sure to update your build
 process to reference the new files, especially if you use UMD Marionette!
+
+##### jQuery deferred objects can now be replaced via the global `Marionette.Deferred` object.
+
+You can now replace the jQuery.Deferred constructor used by Marionette so that you can use your own deferred implementation by setting Marionette.Deferred to your preferred implementation.
 
 #### Applications and Modules
 
